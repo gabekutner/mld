@@ -6,21 +6,41 @@
 
 body {
   margin: 0;
+  background-color: #B9B8A5;
   font-family: 'Lato', sans-serif;
 }
 
 .hero {
+  /* the grey swoop thingy */
   background: url(./images/hero-bg.svg) top center no-repeat;
   background-size: cover;
+  padding-bottom: 100px;
 }
 
-.footer {
+/* .footer {
   background: url(./images/footer.svg) top center no-repeat;
   background-size: cover;
+} */
+.footer {
+  background-color: #859781;
 }
-
+/* 
 .cta {
   background: linear-gradient(rgba(2,2,2,.7),rgba(0,0,0,.7)),url(https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) fixed center center;
+} */
+
+.navbar {
+  background-color: #B9B8A5;
 }
 
+.navbar-link {
+  color: #00421c;
+}
 
+.navbar-link:hover {
+  color: #859781;
+}
+
+.text {
+  color: #00421c;
+}

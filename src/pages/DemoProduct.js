@@ -8,7 +8,7 @@ import Notiflix from 'notiflix';
 
 const DemoProduct = (props) => {
 
-    useDocTitle('MLD | Molad e Konsult - Demo our products')
+    useDocTitle('St. George Pathfinders')
 
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')

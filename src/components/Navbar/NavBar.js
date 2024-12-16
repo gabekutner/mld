@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import NavLinks from '../Navbar/NavLinks';
 import { HashLink } from 'react-router-hash-link';
-
+import iconImg from '../../images/st george pathfindersBW.png'
+// import backgroundImg from '../../images/trees-removebg-preview.png';
 
 const NavBar = () => {
     const [top, setTop] = useState(!window.scrollY);
@@ -9,7 +10,6 @@ const NavBar = () => {
     function handleClick() {
         setisOpen(!isOpen);
     }
-
 
     useEffect(() => {
       const scrollHandler = () => {
@@ -20,11 +20,24 @@ const NavBar = () => {
     }, [top]);
 
     return (
-        <nav className={`fixed top-0 w-full z-30 transition duration-300 ease-in-out mb-16 ${!top && 'bg-white shadow-lg'}`}>
+        <nav className={`fixed top-0 w-full z-30 transition duration-300 ease-in-out mb-16 ${!top && 'navbar shadow-lg'}`}
+        // style={{
+        //     backgroundImage: `url(${backgroundImg})`,
+        //     backgroundPosition: 'center',
+        //     backgroundSize: 'cover',
+        //   }}
+        >
+            {/* Overlay gradient for better text visibility */}
+            {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-black/60 to-transparent z-0"></div> */}
+
             <div className="flex flex-row justify-between items-center py-2">
                 <div className="flex flex-row justify-center md:px-12 md:mx-12 items-center text-center font-semibold">
-                    <HashLink smooth to="/#hero"><h1 className="font-extrabold text-4xl text-blue-900">mld</h1></HashLink>
-                    
+                    <HashLink smooth to="/#hero" className="flex items-center space-x-6">
+                        <img alt="card img" className="rounded w-16 h-auto" src={iconImg} />
+                        <h1 className="font-extrabold text-4xl text">
+                            St. George Pathfinders
+                        </h1>
+                    </HashLink>
                 </div>
                 <div className="group flex flex-col items-center">
                     <button className="p-2 rounded-lg lg:hidden text-blue-900" onClick={handleClick}>
@@ -51,7 +64,6 @@ const NavBar = () => {
             </div>
         </nav>
     )
-    
 }
 
 
