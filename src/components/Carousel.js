@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import heroBg from '..hero-bg.svg'; // Import the image
 import heroBg from "../images/hero-bg.svg"
-
 import img from "../images/IMG_2099 copy(1).jpg"
 
 // Example image URLs (replace these with your actual image URLs)
