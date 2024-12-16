@@ -10,11 +10,17 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-.hero {
+/* .hero { */
   /* the grey swoop thingy */
+  /* background: url(./images/hero-bg.svg) top center no-repeat;
+  background-size: cover;
+  padding-bottom: 100px; */
+/* } */
+
+.carousel {
   background: url(./images/hero-bg.svg) top center no-repeat;
   background-size: cover;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 
 /* .footer {

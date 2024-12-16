@@ -1,73 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, {  } from 'react';
 import NavBar from '../components/Navbar/NavBar';
-
-import img1 from '../images/IMG_2099 copy(1).jpg';
-import img2 from '../images/IMG_2099 copy(1).jpg';
-import img3 from '../images/IMG_2099 copy(1).jpg';
-import img4 from '../images/IMG_2099 copy(1).jpg';
+import { Link } from 'react-router-dom';
+// import heroImg from '../images/web-dev.svg
+import flyerImg from '../images/README.jpg';
 
 const Hero = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [img1, img2, img3, img4];
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+    return (
+        <>
+            <div className="hero" id='hero'>
+                <div>
+                    <NavBar />
+                </div>
+                
+                <div className="m-auto overflow-hidden mx-4 mt-8 lg:mt-4 p-2 md:p-12 h-5/6" data-aos="zoom-in">
 
-  useEffect(() => {
-    const intervalId = setInterval(nextSlide, 5000);
-
-    return () => clearInterval(intervalId);
-  });
-
-  return (
-    <>
-      {/* <div className="hero" id="hero"> */}
-        <div className="hero" id='hero'>
-            <div>
-                <NavBar />
-            </div>
-
-            <div className="m-auto overflow-hidden mx-4 mt-12 lg:mt-16 p-2 md:p-12 h-5/6 lg:pb-24" data-aos="zoom-in">
-                <div id="hero" className="flex flex-col lg:flex-row py-8 justify-between text-center lg:text-left">
-                    <div className="lg:w-1/2 flex flex-col justify-center" data-aos="zoom-in" data-aos-delay="200">
-                    <h1 className="mb-5 md:text-5xl text-3xl font-bold text">About</h1>
-                        <div className="text-xl font-semibold tracking-tight mb-5 text-gray-600">
-                            St. George Pathfinders is a scouting organization that originated in Russia in 1909. Founded in Northern
-                            California in 1950, our chapter carries on the long-standing tradition of mentoring youth in:
-                            <ul className="mt-4">
-                                <li>• Traditional scouting skills</li>
-                                <li>• Developing a strong moral character</li>
-                                <li>• Learning the responsibilities of citizenship</li>
-                                <li>• Maintaining close ties to their Russian heritage</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div className="flex lg:justify-end w-full lg:w-1/2 relative">
-                        <div className="carousel-container w-full h-72 relative overflow-hidden">
-                            <div
-                                className="carousel-wrapper w-full h-full flex transition-transform duration-1000 ease-in-out"
-                                style={{
-                                    transform: `translateX(-${currentIndex * 100}%)`,
-                                }}
-                            >
-                            {images.map((img, index) => (
-                                <div key={index} className="flex-shrink-0 w-full h-full">
-                                    <img
-                                    src={img}
-                                    alt={`carousel-image-${index}`}
-                                    className="w-[75%] h-full object-cover rounded-lg mx-auto"
-                                    />
-                                </div>
-                            ))}
+                    <div id='hero' className="flex flex-col lg:flex-row py-8 justify-between text-center lg:text-left">
+                        <div className="lg:w-1/2 flex flex-col justify-center" data-aos="zoom-in" data-aos-delay="200">
+                            <h1 className="mb-5 md:text-5xl text-3xl font-bold text-blue-900">
+                                Bespoke software solutions for your unique business needs
+                            </h1>
+                            <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">We are a team of highly motivated and skilled developers dedicated to delivering only the best software.</div>
+                            <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
+                                <Link to="/contact" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0">
+                                    Add to my Calendar
+                                    <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
+                                </Link>
                             </div>
+                        </div>
+                        <div className="flex lg:justify-center w-full lg:w-1/2" data-aos="fade-up" data-aos-delay="700">
+                            <img 
+                                alt="card img" 
+                                className="rounded-t duration-1000 w-3/4 h-auto" // Centered and adjusted width
+                                src={flyerImg} 
+                            />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </>
+        </>
   );
 };
 
