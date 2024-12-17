@@ -5,8 +5,9 @@ import React from 'react';
 import Hero from '../components/Hero';
 // import Calendar from '../components/Calendar';
 // import Portfolio from '../components/Portfolio';
-// import Services from '../components/Services';
+import Services from '../components/Services';
 import Carousel from '../components/Carousel';
+import About from '../components/About';
 
 
 const Home = () => {
@@ -14,9 +15,10 @@ const Home = () => {
         <>
             <Hero />
             <Carousel />
+            <About />
             {/* <Calendar /> */}
-            {/* <Services />
-            <Portfolio /> */}
+            <Services />
+            {/* <Portfolio /> */}
             {/* <Clients /> */}
             {/* <Cta/> */}
             {/* <Footer /> */}

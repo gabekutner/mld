@@ -32,7 +32,7 @@ const NavBar = () => {
 
             <div className="flex flex-row justify-between items-center py-2">
                 <div className="flex flex-row justify-center md:px-12 md:mx-12 items-center text-center font-semibold">
-                    <HashLink smooth to="/#hero" className="flex items-center space-x-6">
+                    <HashLink smooth to="/" className="flex items-center space-x-6">
                         <img alt="card img" className="rounded w-16 h-auto" src={iconImg} />
                         <h1 className="font-extrabold text-4xl text">
                             St. George Pathfinders
